@@ -297,7 +297,7 @@
   justify-content: space-between;
 }
 .restaurant--choice {
-  margin: 30px 10px;
+  margin: 30px auto;
   height: 250px;
   width: 350px;
   box-shadow: 1px 1px 12px #9c9c9c;
