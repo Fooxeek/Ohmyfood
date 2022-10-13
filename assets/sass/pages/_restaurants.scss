@@ -1,0 +1,181 @@
+.main {
+    background-color: #f0f0f0;
+    max-width: 600px;
+    margin: auto;
+    &--image {
+        object-fit: cover;
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+    }
+}
+
+.menu {
+    padding: 0 15px;
+    position: relative;
+    top: -70px;
+    border-radius: 20px 20px 0 0;
+    background-color: #f0f0f0;
+    &--title {
+        h1 {
+            font-family: "Shrikhand","Roboto","Sans serif";
+            font-size: 25px;
+            padding-top: 20px;
+        }
+    }
+    &--heart {
+        position: absolute;
+        z-index: 0;
+        top: 20px;
+        right: 50px;
+        font-size: 25px;
+        background: #000000;
+        color: transparent;
+        overflow: hidden;
+        -webkit-background-clip: text;
+        background-clip: text;   
+    }
+
+    
+    .starter {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            padding-top: 10px;
+            font-size: 15px;
+        }
+        h3::after {
+            display: block;
+            content: '';
+            border-bottom: 3px solid $cyan;
+            padding-top: 5px;
+            width: 35px;
+        }
+    }
+
+    .dish {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            padding-top: 10px;
+            font-size: 15px;
+        }
+        h3::after {
+            display: block;
+            content: '';
+            border-bottom: 3px solid $cyan;
+            padding-top: 5px;
+            width: 35px;
+        }
+    }
+
+    .dessert {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            padding-top: 10px;
+            font-size: 15px;
+        }
+        h3::after {
+            display: block;
+            content: '';
+            border-bottom: 3px solid $cyan;
+            padding-top: 5px;
+            width: 35px;
+        }
+    }
+    .meals {
+        background-color: #fff;
+        border-radius: 25px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        transition: padding-right 450ms ease-in-out;
+        animation: transition 1.5s linear  forwards;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        box-shadow: 1px 1px 12px #9c9c9c;
+        padding: 10px;
+        margin: 10px 0;
+        
+        h4 {
+            margin: 5px 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .range {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                margin: 5px 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            span {
+                display: inline;
+                font-weight: bold;
+            }
+            .meals--price {
+                transition: transform 330ms ease-in-out;
+            }
+        }
+        .meals--cross {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $cyan;
+            width: 40px;
+            height: 65px;
+            border-radius: 0 15px 15px 0;
+            position: absolute;
+            padding: 20px;
+            right: -50px;
+            top: 0;
+            opacity: 0;
+            transition: transform 330ms ease-in-out;
+            padding-top: 3px;
+            .fa-check-circle {
+                color: #fff;
+                transition: transform 500ms ease-in-out;
+            }
+        }
+    }
+    .meals:hover {
+        .meals--price {
+            transform: translate(-75px);
+        }
+        .fa-check-circle {
+            transform: rotate(360deg);
+        }
+        .meals--cross {
+            opacity: 1;
+            transform: translate(-50px);
+        }
+    }
+}
+
+.menu--heart>i {
+    @include restaurant_heart
+}
+
+.menu--heart:hover>i {
+    @include animation_heart
+}
+
+
+.order {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+@media screen and (min-width:600px) {
+    .main {
+        &--image {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+    }
+}

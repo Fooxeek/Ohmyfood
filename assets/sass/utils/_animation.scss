@@ -1,0 +1,67 @@
+@mixin accueil_heart {
+    position:absolute;
+    display: block;
+    content:"";
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    background: linear-gradient(to bottom, $purple, $pink);
+    -webkit-background-clip: text;
+    background-clip: text;          
+    animation: toDown .5s forwards;
+}
+
+@mixin restaurant_heart {
+    position: absolute;
+    display: block;
+    content:"";
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    background: linear-gradient(to bottom, $purple, $pink);
+    -webkit-background-clip: text;
+    background-clip: text;          
+    animation: toDown .5s forwards;
+}
+
+@mixin animation_heart {
+    animation: toUp .5s forwards;
+}
+
+@keyframes toDown {
+    0% {
+        opacity:1;
+        background: linear-gradient(to bottom, $purple, $pink);
+        -webkit-background-clip: text;      
+    }
+    50% {
+        opacity:.5;
+        background: linear-gradient(to bottom, transparent, $purple , $pink);
+        -webkit-background-clip: text;          
+    }
+    100% {
+        opacity:0;
+        background: linear-gradient(to bottom,transparent ,transparent, transparent);
+        -webkit-background-clip: text;              
+    }
+}
+
+@keyframes toUp {
+    0% {
+        opacity:0;
+        background: linear-gradient(to bottom,transparent ,transparent, transparent);
+        -webkit-background-clip: text;          
+    }
+    50% {
+        opacity:.5;
+        background: linear-gradient(to bottom, transparent , $purple, $pink);
+        -webkit-background-clip: text;          
+    }
+    100% {
+        opacity:1;
+        background: linear-gradient(to bottom , $purple, $pink);
+        -webkit-background-clip: text;      
+        
+    }
+}
+

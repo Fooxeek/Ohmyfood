@@ -1,0 +1,68 @@
+.timing {
+    animation: fadeIn 5s linear both;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba($color: #ececec, $alpha: 0.7);
+    z-index: 10;
+
+    .loader {
+        z-index: 100;
+        position: fixed;
+        display: inline-block;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        transform-origin: bottom center;
+        animation: rotate 3s linear infinite;
+        
+        &--circle {
+            display: inline-block;
+            background-color: $purple;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: grow 1.5s linear infinite;
+           
+        }
+        &--circle:nth-child(2) {
+            background-color: $pink;
+            animation-delay: 0.75s;
+        }
+    }
+}
+
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { 
+      opacity: 1;
+      z-index: 10000;
+    }
+    10%{
+        opacity: 0.9;
+    }
+    50%{
+        opacity: 0.6
+    }
+    80%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1000;
+    }
+}
