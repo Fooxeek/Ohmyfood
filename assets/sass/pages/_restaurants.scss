@@ -1,11 +1,11 @@
 .main {
     background-color: #f0f0f0;
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     &--image {
         object-fit: cover;
         width: 100%;
-        max-width: 600px;
+        max-width: 900px;
         height: 400px;
     }
 }
@@ -116,9 +116,7 @@
             span {
                 display: inline;
                 font-weight: bold;
-            }
-            .meals--price {
-                transition: transform 330ms ease-in-out;
+                margin-right: 20px;
             }
         }
         .meals--cross {
@@ -143,16 +141,15 @@
         }
     }
     .meals:hover {
-        .meals--price {
-            transform: translate(-75px);
-        }
-        .fa-check-circle {
-            transform: rotate(360deg);
-        }
+        padding-right: 75px;
         .meals--cross {
             opacity: 1;
             transform: translate(-50px);
         }
+        .fa-check-circle {
+            transform: rotate(360deg);
+        }
+
     }
 }
 
@@ -170,7 +167,7 @@
     text-align: center;
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:900px) {
     .main {
         &--image {
             display: flex;
