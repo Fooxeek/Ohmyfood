@@ -112,44 +112,44 @@
     opacity: 1;
   }
 }
-.starter.meals:nth-child(1) {
+.starter .meals:nth-child(2) {
   animation-delay: 0.1s;
 }
 
-.starter.meals:nth-child(2) {
+.starter .meals:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.starter .meals:nth-child(4) {
   animation-delay: 0.5s;
 }
 
-.starter.meals:nth-child(3) {
-  animation-delay: 1s;
+.starter .meals:nth-child(5) {
+  animation-delay: 0.7s;
 }
 
-.starter.meals:nth-child(4) {
-  animation-delay: 4s;
+.dish .meals:nth-child(2) {
+  animation-delay: 0.9s;
 }
 
-.dish.meals:nth-child(1) {
-  animation-delay: 2s;
+.dish .meals:nth-child(3) {
+  animation-delay: 1.1s;
 }
 
-.dish.meals:nth-child(2) {
-  animation-delay: 2.5s;
+.dish .meals:nth-child(4) {
+  animation-delay: 1.3s;
 }
 
-.dish.meals:nth-child(3) {
-  animation-delay: 3s;
+.dessert .meals:nth-child(2) {
+  animation-delay: 1.5s;
 }
 
-.dessert.meals:nth-child(1) {
-  animation-delay: 3.5s;
+.dessert .meals:nth-child(3) {
+  animation-delay: 1.7s;
 }
 
-.dessert.meals:nth-child(2) {
-  animation-delay: 4s;
-}
-
-.dessert.meals:nth-child(3) {
-  animation-delay: 4.5s;
+.dessert .meals:nth-child(4) {
+  animation-delay: 1.9s;
 }
 
 .header {
@@ -425,44 +425,44 @@
     opacity: 1;
   }
 }
-.starter.meals:nth-child(1) {
+.starter .meals:nth-child(2) {
   animation-delay: 0.1s;
 }
 
-.starter.meals:nth-child(2) {
+.starter .meals:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.starter .meals:nth-child(4) {
   animation-delay: 0.5s;
 }
 
-.starter.meals:nth-child(3) {
-  animation-delay: 1s;
+.starter .meals:nth-child(5) {
+  animation-delay: 0.7s;
 }
 
-.starter.meals:nth-child(4) {
-  animation-delay: 4s;
+.dish .meals:nth-child(2) {
+  animation-delay: 0.9s;
 }
 
-.dish.meals:nth-child(1) {
-  animation-delay: 2s;
+.dish .meals:nth-child(3) {
+  animation-delay: 1.1s;
 }
 
-.dish.meals:nth-child(2) {
-  animation-delay: 2.5s;
+.dish .meals:nth-child(4) {
+  animation-delay: 1.3s;
 }
 
-.dish.meals:nth-child(3) {
-  animation-delay: 3s;
+.dessert .meals:nth-child(2) {
+  animation-delay: 1.5s;
 }
 
-.dessert.meals:nth-child(1) {
-  animation-delay: 3.5s;
+.dessert .meals:nth-child(3) {
+  animation-delay: 1.7s;
 }
 
-.dessert.meals:nth-child(2) {
-  animation-delay: 4s;
-}
-
-.dessert.meals:nth-child(3) {
-  animation-delay: 4.5s;
+.dessert .meals:nth-child(4) {
+  animation-delay: 1.9s;
 }
 
 .main {
@@ -552,8 +552,8 @@
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  transition: padding-right 450ms ease-in-out;
-  animation: transition 1.5s;
+  opacity: 0;
+  animation: transition 1.5s linear forwards;
   white-space: nowrap;
   text-overflow: ellipsis;
   box-shadow: 1px 1px 12px #9c9c9c;
