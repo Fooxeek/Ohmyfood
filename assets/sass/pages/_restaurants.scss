@@ -1,3 +1,5 @@
+@import '../utils/transition';
+
 .main {
     background-color: #f0f0f0;
     max-width: 900px;
@@ -91,7 +93,7 @@
         cursor: pointer;
         position: relative;
         transition: padding-right 450ms ease-in-out;
-        animation: transition 1.5s linear  forwards;
+        animation: transition 1.5s;
         white-space: nowrap;
         text-overflow: ellipsis;
         box-shadow: 1px 1px 12px #9c9c9c;
@@ -150,6 +152,16 @@
             transform: rotate(360deg);
         }
 
+    }
+    .meals:not(:hover) {
+        padding-right: 0;
+        .meals--cross {
+            opacity: 1;
+            transform: translate(50px);
+        }
+        .fa-check-circle {
+            transform: rotate(-360deg);
+        }
     }
 }
 
